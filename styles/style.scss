@@ -1,0 +1,270 @@
+// # Front-end Style Guide
+
+// ## Layout
+
+// The designs were created to the following widths:
+
+// - Mobile: 375px
+// - Desktop: 1440px
+
+// ## Colors
+
+// ### Primary
+
+// - Blue: hsl(246, 80%, 60%)
+
+// - Light red (work): hsl(15, 100%, 70%)
+// - Soft blue (play): hsl(195, 74%, 62%)
+// - Light red (study): hsl(348, 100%, 68%)
+// - Lime green (exercise): hsl(145, 58%, 55%)
+// - Violet (social): hsl(264, 64%, 52%)
+// - Soft orange (self care): hsl(43, 84%, 65%)
+
+// ### Neutral
+
+// - Very dark blue: hsl(226, 43%, 10%)
+// - Dark blue: hsl(235, 46%, 20%)
+// - Desaturated blue: hsl(235, 45%, 61%)
+// - Pale Blue: hsl(236, 100%, 87%)
+
+// ## Typography
+
+// ### Body Copy
+
+// - Font size: 18px (card titles e.g. Work, Play)
+
+// ### Font
+
+// - Family: [Rubik](https://fonts.google.com/specimen/Rubik)
+// - Weights: 300, 400, 500
+
+// The text for the previdous period's time should change based on the active timeframe. For Daily, it should read "Yesterday" e.g "Yesteray - 2hrs". For Weekly, it should read "Last Week" e.g. "Last Week - 32hrs". For monthly, it should read "Last Month" e.g. "Last Month - 19hrs".
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+$very-dark-blue: hsl(226, 43%, 10%);
+$dark-blue: hsl(235, 46%, 20%);
+$desaturated-blue: hsl(235, 45%, 61%);
+$pale-blue: hsl(236, 100%, 87%);
+
+
+$blue: hsl(246, 80%, 60%);
+$light-work: hsl(15, 100%, 70%);
+$soft-play: hsl(195, 74%, 62%);
+$light-study: hsl(348, 100%, 68%);
+$lime-exercise: hsl(145, 58%, 55%);
+$violet-social: hsl(264, 64%, 52%);
+$soft-self: hsl(43, 84%, 65%);
+
+@mixin flex(){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body{
+    font-family: 'Rubik', sans-serif;
+    background: $very-dark-blue;
+    height: 100vh;
+    @include flex();
+}
+
+main{
+    gap: 10px 15px; 
+    @include flex();
+
+    .user{
+        padding: 2rem 7rem 7rem 2rem;
+        background-color: $blue;
+        border-radius: 15px;
+        bottom: -0.6rem;
+        position: relative;
+        color: #fff;
+        position: relative;
+        z-index: 2;
+
+
+        img{
+            width: 80px;
+            border: 3px solid #fff;
+            border-radius: 50%;
+            margin-bottom: 3rem;
+        }
+
+        span{
+            color: $pale-blue;
+
+        }
+
+        h1{
+            margin-top: 0.5rem;
+            font-weight: 300;
+            font-size: 3.5rem;
+            line-height: 60px;
+        }
+    }
+
+    .time{
+        background-color: $dark-blue;
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 1.3rem;
+        border-radius: 0 0 20px 20px;
+        font-size: 1rem;
+        
+        button{
+            cursor: pointer;
+            color: $pale-blue;
+            padding: 0.5rem;
+            width: 100px;
+            background-color: transparent;
+            border: none;
+            text-align: left;
+
+            &:focus{
+                color: #fff;
+            }
+        }
+    }
+
+
+    .content1{
+        border-radius: 20px;
+        width: 100%;
+        display: grid; 
+        grid-template-columns: 1fr 1fr 1fr; 
+        grid-template-rows: 1fr 1fr; 
+        gap: 1rem; 
+
+        .background{
+            height: 50px;
+            border-radius: 15px 15px 0 0;
+
+           
+        }
+
+        .main-content{
+            top: -0.6rem;
+            position: relative;
+            border-radius: 15px;
+            background-color: $dark-blue;
+            padding: 1.5rem;
+
+            .content-header{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+
+                h3{
+                    font-size: 1.2rem;
+                    color: #fff;
+                    font-weight: 500;
+                }
+
+                img{
+                    cursor: pointer;
+                }
+            }
+
+            .content-body{
+                h2{
+                    padding: 1rem 0 0 0;
+                    font-size: 3rem;
+                    font-weight: 400;
+                    color: #fff;
+                }
+            }
+
+            .content-footer{
+                color: $desaturated-blue;
+            }
+        }
+            
+    }
+}
+
+  
+@media screen and (max-width: 600px) {
+    body{
+        display: block;
+
+        main{
+            display: block;
+            margin: 5rem 1rem;
+    
+    
+            .user{
+                @include flex();
+                justify-content: left;
+                padding: 2rem;
+                gap: 1rem;
+    
+                img{
+                    margin: 0;
+            
+                }
+    
+                h1{
+                    font-size: 1.4rem;
+                    margin: 0;
+                }
+            }
+    
+            .time{
+                flex-direction: row;
+                justify-content: space-between;
+            }
+    
+            .content1{
+                margin-top: 2rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+    
+                .content{
+                    width: 100%;
+                    
+                    .content-body{
+                        display: inline-block;
+    
+                        h2{
+                            font-size: 2rem;
+                        }
+                    }
+    
+                    .content-footer{
+                        float: right;
+                        margin-top: 2rem;  
+    
+                        span{
+                            font-size: 0.9rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+
+@media screen and (min-width: 601px) and (max-width: 1000px) {
+    body{
+        display: block;
+        
+        main{
+            display: block;
+            margin: 3rem;
+            
+            .content1{
+                margin-top: 2rem;
+                
+            }
+        }
+    }
+
+   
+}
+  

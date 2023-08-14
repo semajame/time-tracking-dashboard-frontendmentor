@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+body {
+  font-family: "Rubik", sans-serif;
+  background: hsl(226, 43%, 10%);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  gap: 10px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .user {
+  padding: 2rem 7rem 7rem 2rem;
+  background-color: hsl(246, 80%, 60%);
+  border-radius: 15px;
+  bottom: -0.6rem;
+  position: relative;
+  color: #fff;
+  position: relative;
+  z-index: 2;
+}
+main .user img {
+  width: 80px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  margin-bottom: 3rem;
+}
+main .user span {
+  color: hsl(236, 100%, 87%);
+}
+main .user h1 {
+  margin-top: 0.5rem;
+  font-weight: 300;
+  font-size: 3.5rem;
+  line-height: 60px;
+}
+main .time {
+  background-color: hsl(235, 46%, 20%);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1.3rem;
+  border-radius: 0 0 20px 20px;
+  font-size: 1rem;
+}
+main .time button {
+  cursor: pointer;
+  color: hsl(236, 100%, 87%);
+  padding: 0.5rem;
+  width: 100px;
+  background-color: transparent;
+  border: none;
+  text-align: left;
+}
+main .time button:focus {
+  color: #fff;
+}
+main .content1 {
+  border-radius: 20px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1rem;
+}
+main .content1 .background {
+  height: 50px;
+  border-radius: 15px 15px 0 0;
+}
+main .content1 .main-content {
+  top: -0.6rem;
+  position: relative;
+  border-radius: 15px;
+  background-color: hsl(235, 46%, 20%);
+  padding: 1.5rem;
+}
+main .content1 .main-content .content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+main .content1 .main-content .content-header h3 {
+  font-size: 1.2rem;
+  color: #fff;
+  font-weight: 500;
+}
+main .content1 .main-content .content-header img {
+  cursor: pointer;
+}
+main .content1 .main-content .content-body h2 {
+  padding: 1rem 0 0 0;
+  font-size: 3rem;
+  font-weight: 400;
+  color: #fff;
+}
+main .content1 .main-content .content-footer {
+  color: hsl(235, 45%, 61%);
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    display: block;
+  }
+  body main {
+    display: block;
+    margin: 5rem 1rem;
+  }
+  body main .user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: left;
+    padding: 2rem;
+    gap: 1rem;
+  }
+  body main .user img {
+    margin: 0;
+  }
+  body main .user h1 {
+    font-size: 1.4rem;
+    margin: 0;
+  }
+  body main .time {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  body main .content1 {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  body main .content1 .content {
+    width: 100%;
+  }
+  body main .content1 .content .content-body {
+    display: inline-block;
+  }
+  body main .content1 .content .content-body h2 {
+    font-size: 2rem;
+  }
+  body main .content1 .content .content-footer {
+    float: right;
+    margin-top: 2rem;
+  }
+  body main .content1 .content .content-footer span {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 1000px) {
+  body {
+    display: block;
+  }
+  body main {
+    display: block;
+    margin: 3rem;
+  }
+  body main .content1 {
+    margin-top: 2rem;
+  }
+}/*# sourceMappingURL=style.css.map */
